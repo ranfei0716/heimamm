@@ -7,15 +7,12 @@
         <i></i>
         <div class="right">用户登录</div>
       </div>
-      <el-form-item label="活动形式"></el-form-item>
       <!-- 输入框 -->
       <div class="textbox">
         <el-form label-width="380px" class="inputbox">
-          <el-input class="input1" prefix-icon="el-icon-user" placeholder="请输入手机号"></el-input>
-
-          <el-input class="input2" prefix-icon="el-icon-lock" placeholder="请输入密码"></el-input>
-
-          <el-input class="input3" prefix-icon="el-icon-key" placeholder="请输入验证码"></el-input>
+          <el-input class="input1" prefix-icon="el-icon-user" placeholder="请输入手机号" v-model="phone"></el-input>
+          <el-input class="input2" prefix-icon="el-icon-lock" placeholder="请输入密码" v-model="password"></el-input>
+          <el-input class="input3" prefix-icon="el-icon-key" placeholder="请输入验证码" v-model="code"></el-input>
           <el-input class="input4"></el-input>
           <el-checkbox class="checked" >我以阅读并同意<a  href="javascript:void(0)" >用户协议</a>和<a href="javascript:void(0)" >隐私条款</a> </el-checkbox>
           <br />
@@ -34,7 +31,11 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      phone:'',
+      password:'',
+      code:''
+    };
   }
 };
 </script>
@@ -70,7 +71,6 @@ export default {
         font-weight: 400;
         font-size: 24px;
       }
-
       i {
         width: 2px;
         background-color: #c7c7c7;
@@ -112,6 +112,10 @@ export default {
       .input4 {
         width: 110px;
         height: 44px;
+        outline: none;
+        border: 0px;
+        background-color:transparent;border:0;
+       
       }
       .checked {
         margin-top: 32px;
