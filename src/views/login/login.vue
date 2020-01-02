@@ -1,8 +1,7 @@
 <template>
   <div>
-
-     <el-button type="success">成功按钮</el-button>
-   <router-view></router-view>
+      <div>2345 </div>
+      <router-view></router-view>
   </div>
 </template>
 
