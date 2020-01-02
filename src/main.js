@@ -6,6 +6,8 @@ import router from "./router/index"
 // 导入element
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+// 导入bass
+import "./style/base.css"
 
 Vue.use(ElementUI);
 
